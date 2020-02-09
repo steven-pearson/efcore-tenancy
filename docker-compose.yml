@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  efcore-tenancy-db:
+    image: ${DOCKER_REGISTRY-}efcoretenancy-db
+    container_name: efcore-tenancy-db
+    build:
+      context: .
+      dockerfile: ./Dockerfile.db
+  efcore-tenancy:
+    image: ${DOCKER_REGISTRY-}efcoretenancy
+    container_name: efcore-tenancy
+    restart: 'always'
+    depends_on:
+        - efcore-tenancy-db
+    build:
+      context: .
+      dockerfile: ./Dockerfile

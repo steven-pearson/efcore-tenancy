@@ -3,6 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>efcore_tenancy</RootNamespace>
+    <DockerComposeProjectPath>docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>e8f2e5b5-c833-4628-84c8-61c487000dba</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
