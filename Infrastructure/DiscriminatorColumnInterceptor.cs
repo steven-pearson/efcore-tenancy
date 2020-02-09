@@ -1,9 +1,7 @@
 using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace efcore_tenancy.Infrastructure
 {
