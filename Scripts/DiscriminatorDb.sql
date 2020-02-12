@@ -1,4 +1,4 @@
-USE [DiscriminatorDB]
+USE [DiscriminatorDb]
 GO
 /****** Object:  Table [dbo].[Products]    Script Date: 24/09/2019 13:46:35 ******/
 SET ANSI_NULLS ON

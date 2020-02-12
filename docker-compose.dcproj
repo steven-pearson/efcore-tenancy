@@ -5,7 +5,7 @@
     <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>{87EAB535-9893-4A51-BC75-C59293E37EA7}</ProjectGuid>
     <DockerLaunchBrowser>True</DockerLaunchBrowser>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/weatherforecast</DockerServiceUrl>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/products</DockerServiceUrl>
     <DockerServiceName>efcore-tenancy</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>

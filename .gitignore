@@ -2,3 +2,5 @@ obj
 bin
 publish
 debug
+.vs
+.db

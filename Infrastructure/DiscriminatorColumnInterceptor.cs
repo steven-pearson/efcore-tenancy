@@ -18,7 +18,7 @@ namespace efcore_tenancy.Infrastructure
             InterceptionResult<DbDataReader> result, 
             CancellationToken cancellationToken = default)
         {
-            command.CommandText = $"USE DiscriminatorDB {command.CommandText}";
+            command.CommandText = $"USE DiscriminatorDb {command.CommandText}";
 
             if (command.CommandText.Contains("WHERE"))
             {
