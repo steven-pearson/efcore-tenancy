@@ -1,31 +1,33 @@
 version: '3.4'
 
 services:
-  efcore-tenancy-db:
-    image: ${DOCKER_REGISTRY-}efcoretenancy-db
-    container_name: efcore-tenancy-db
-    environment:
-      SA_PASSWORD: "Password123"
-      ACCEPT_EULA: "Y"
+  efcoretenancydb:
+    image: ${DOCKER_REGISTRY-}efcoretenancydb
+    container_name: efcoretenancydb
     build:
       context: .
       dockerfile: ./Dockerfile.db
     volumes:
         - ./Scripts:/opt/scripts
         - sqlvolume:/var/opt/mssql
+    ports:
+        - 21433:1433
     networks:
       efnetwork:
         aliases:
           - db.efcore.com
-  efcore-tenancy:
+
+  efcoretenancy:
     image: ${DOCKER_REGISTRY-}efcoretenancy
-    container_name: efcore-tenancy
+    container_name: efcoretenancy
     restart: 'always'
     depends_on:
-        - efcore-tenancy-db
+        - efcoretenancydb
     build:
       context: .
       dockerfile: ./Dockerfile
+    ports:
+        - "0.0.0.0:8080:80"
     networks:
       efnetwork:
         aliases:

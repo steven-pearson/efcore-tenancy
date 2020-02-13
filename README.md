@@ -4,18 +4,18 @@
 
 Docker project sets up db and api container to host the project. Install and configure Docker
 
-## DB setup
+## Launching containers
 
-Rund the docker-compose project or run 'docker-compose up' from a command line. Connect to the db container by running the following command.
+At a terminal/command prompt run
+
+```
+docker-compose up.
+```
+
+Connect to the db container by running the following command.
 
 ```
 docker exec -it efcore-tenancy-db bash
-```
-
-Within the container then run sql command prompt
-
-```
-sqlcmd -U sa -P Password123
 ```
 
 Within SQL create the databases needed for the sample
@@ -36,3 +36,8 @@ sqlcmd -U sa -P Password123 -i /opt/scripts/DiscriminatorDb.sql
 sqlcmd -U sa -P Password123 -i /opt/scripts/TenantPerSchemaDb.sql
 ```
 
+## Testing
+
+The service can be hit at the following url
+
+[http://localhost:8080/products]

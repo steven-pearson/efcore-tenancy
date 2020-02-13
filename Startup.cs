@@ -39,7 +39,7 @@ namespace efcore_tenancy
 
             app.UseMiddleware<TenantInfoMiddleware>();
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
